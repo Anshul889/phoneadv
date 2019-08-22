@@ -4,9 +4,6 @@ import history from '../history';
 
 export const fetchContacts = () => async dispatch => {
   const response = await numbers.get('/581335f71000004204abaf83');
-  response.data.contacts.forEach((contact, index) => {
-    return contact.id = index + 1;
-  })
   dispatch({ type: FETCH_CONTACTS, payload: response.data.contacts});
 }
 
@@ -18,16 +15,16 @@ export const fetchContact = contact => {
 };
 
 export const editContact = (id, formValues) => dispatch => {
-  dispatch({ type: EDIT_CONTACT, payload: id })
-    history.push('/');
+  dispatch({ type: EDIT_CONTACT, payload: {...formValues, id} })
+    history.push('/numberlist');
 };
 
 export const createContact = formValues => dispatch => {
   dispatch({ type: CREATE_CONTACT, payload: formValues});
-  history.push('/');
+  history.push('/numberlist');
 };
 
-export const deleteContact = id => dispatch => {
-  dispatch({type: DELETE_CONTACT, payload: id});
-  history.push('/');
+export const deleteContact = name => dispatch => {
+  dispatch({type: DELETE_CONTACT, payload: name});
+  history.push('/numberlist');
 }

@@ -4,7 +4,7 @@ import { fetchContact } from '../actions';
 
 class ContactShow extends React.Component {
   componentDidMount() {
-    this.props.fetchContact(this.props.match.params.id)
+    this.props.fetchContact(this.props.match.params.name)
   }
   render() {
     if(!this.props.number) {
@@ -24,7 +24,7 @@ class ContactShow extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return { number: state.numbers[ownProps.match.params.id]};
+  return { number: state.numbers[ownProps.match.params.name]};
 };
 
 export default connect(mapStateToProps, { fetchContact })(ContactShow);

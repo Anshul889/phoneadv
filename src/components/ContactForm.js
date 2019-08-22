@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
       <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form">
         <Field name="name" component={this.renderInput} label="Name"/>
         <Field
-          name="phonenumber"
+          name="phone_number"
           component={this.renderInput}
           label="Phone Number"
           />
@@ -55,8 +55,8 @@ const validate = formValues => {
     errors.name = 'You must enter a Name';
   }
 
-  if (!formValues.phonenumber) {
-    errors.phonenumber = 'You must enter a Phone Number'
+  if (!formValues.phone_number) {
+    errors.phone_number = 'You must enter a Phone Number'
   }
 
   return errors;

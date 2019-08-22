@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { fetchContacts } from '../actions';
 import styles from './NumberList.module.css';
 import { Link } from 'react-router-dom';
 
 class NumberList extends React.Component{
   state = {
     search: '',
+  }
+
+  componentDidMount(){
   }
 
   renderList() {
@@ -92,4 +95,4 @@ class NumberList extends React.Component{
     };
   }
 
-export default connect(mapStateToProps)(NumberList);
+export default connect(mapStateToProps, { fetchContacts })(NumberList);
