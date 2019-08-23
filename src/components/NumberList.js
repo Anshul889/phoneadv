@@ -16,7 +16,7 @@ class NumberList extends React.Component{
     });
 
     if(filteredContacts.length === 0 && this.state.search){
-      return <div style={{fontSize : '2em'}}>No matches found!</div>
+      return <div className={styles.error}>No matches found!</div>
     } else {
       return filteredContacts.map((number, index) => {
         return (

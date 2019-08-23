@@ -80,3 +80,20 @@ input {
 .search{
   grid-column: span 2;
 }
+
+.error {
+  display: block;
+  box-shadow: 0 0 0 1px #e0b4b4 inset, 0 0 0 0 transparent;
+  background-color: #fff6f6;
+  color: #912d2b;
+  min-height: 1em;
+  margin: 1em 0;
+  background: #f8f8f9;
+  padding: 1em 1.5em;
+  line-height: 1.4285em;
+  border-radius: .28571429rem;
+  font-size: 1.14285714em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-weight: 700;
+  margin: -.14285714em 0 0 0;
+}

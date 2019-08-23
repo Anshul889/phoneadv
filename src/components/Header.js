@@ -7,8 +7,7 @@ const Header = () => {
     <div className={styles.Navigation}>
       <div className={styles.inner}>
         <div className={styles.dnavigation}>
-          <Link to="/numberlist">Phonebook</Link>
-          <Link to="/">Restart App</Link>
+          <Link to="/">Phonebook</Link>
         </div>
       </div>
     </div>

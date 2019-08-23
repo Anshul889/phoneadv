@@ -30,7 +30,10 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form">
+      <form
+        onSubmit={this.props.handleSubmit(this.onSubmit)}
+        className="ui form error"
+        >
         <Field name="name" component={this.renderInput} label="Name"/>
         <Field
           name="phone_number"

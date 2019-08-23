@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchContacts } from '../actions';
+import history from '../history';
 
 class Welcome extends React.Component {
-    componentDidMount(){
-      this.props.fetchContacts();
-    }
+  componentDidMount(){
+    this.props.fetchContacts()
+    .then(history.push('/numberlist'))
+  }
 
   render(){
     return(
-    <div>Click here to start using the app <Link to="/numberlist">Start</Link></div>
+    <div></div>
     )
   }
 }
